@@ -159,14 +159,48 @@ function handleConverted(firstScreenDataset, secondScreenDataset, dataValue) {
     const second = document.querySelector('.second')
     if (input.value == '0.00') {
         first.innerHTML = '0.00' + ' ' + firstScreenDataset
+        error()
+        setTimeout(function() {
+            removeError()
+        }, 3000)
     } else {
         first.innerHTML = input.value + ' ' + firstScreenDataset
     }
     second.innerHTML = (input.value * dataValue).toFixed(2) + ' ' + secondScreenDataset
 }
 
+function error() {
+    const error = document.querySelector('.error')
+    const form = document.querySelector('form')
+        // console.log(error)
+    error.classList.add('error-switch')
+    form.style.borderBottom = 'solid red 1px'
+}
+
+function removeError() {
+    const error = document.querySelector('.error')
+    const form = document.querySelector('form')
+        // console.log(error)
+    error.classList.remove('error-switch')
+    form.style.borderBottom = 'solid #0052ff 1px'
+}
+
+function bodyFun(e) {
+    // console.log('hello')
+    // console.log(e)
+    let dropdown = document.querySelectorAll('.dropdown')
+    console.log(dropdown)
+    if (e.target == body) {
+        dropdown.forEach(dropdown => {
+            dropdown.classList.remove('dropdown-switch')
+        })
+    }
+}
 let button = document.querySelector('button')
 button.addEventListener('click', calculate)
+let body = document.querySelector('body')
+body.addEventListener('click', bodyFun)
+console.log(body)
     // window.addEventListener('load', clearAll)
     // let currencyConverted = document.querySelectorAll('.currency-converted-to')
     // currencyConverted.forEach(item => item.addEventListener('click', (e) => {

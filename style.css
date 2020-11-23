@@ -68,6 +68,21 @@ form .fa {
   color: #0052ff;
 }
 
+.form-error {
+  border-bottom: 1px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+  letter-spacing: 1px;
+}
+
+.error-switch {
+  display: block;
+}
+
 button {
   padding: 12px 0px;
   width: 100%;
