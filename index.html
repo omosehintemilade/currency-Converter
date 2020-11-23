@@ -21,7 +21,7 @@
             </div>
         </div>
         <form action="">
-            <input class="input" type="text" autocomplete="off" placeholder="Input Amount">
+            <input class="input" type="text" autocomplete="off" value="0.00">
             <i class="fa fa-refresh" aria-hidden="true"></i>
         </form>
 
@@ -35,20 +35,20 @@
                             <img id="image" src="https://restcountries.eu/data/asm.svg" alt="">
 
                         </div>
-                        <p id="screen">USD / United State Dollar</p>
+                        <p id="screen" data-code="USD">USD / United State Dollar</p>
                     </div>
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </div>
             </div>
 
             <div class="dropdown">
-                <div class="select-dropdown-outer">
+                <div class="select-dropdown-outer" id="dropdown">
                     <div class="select-dropdown">
                         <div class="flag-country">
                             <div class="image">
                                 <img id="dropdownimage" src="football_audience.jpg" alt="">
                             </div>
-                            <p id="paragraph">SHILLINGS / Naira</p>
+                            <p id="paragraph"></p>
                         </div>
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </div>
@@ -66,7 +66,7 @@
                             <img id="image" src="https://restcountries.eu/data/ala.svg" alt="">
 
                         </div>
-                        <p id="screen">EUR / Euro</p>
+                        <p id="screen" data-code="EUR">EUR / Euro</p>
                     </div>
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </div>
@@ -89,25 +89,10 @@
         </div>
         <button>convert</button>
         <div class="display-converted">
-            <p> 150 USD = 9678.92 RUB</p>
+            <p> <span class="first">150 USD</span> = <span class="second">9678.92 RUB</span> </p>
         </div>
     </div>
     <script src="main.js"></script>
 </body>
 
 </html>
-<!-- <div class="flag-country">
-    <div class="image">
-        <img src="football_audience.jpg" alt="">
-    </div>
-    <p>NGN / Naira</p>
-</div>
-<i class="fa fa-caret-down" aria-hidden="true"></i>
-</div> -->
-<!-- <img src="football_audience.jpg" alt=""> -->
-<!-- <select>
-                <option>  <img src="football_audience.jpg" alt="">RUB / Rubie</option>
-                <option>NGN / Naira</option>
-                <option>USD / Dollar</option>
-                <option>EUR / Euros</option>
-            </select> -->
