@@ -136,11 +136,11 @@ let input = document.querySelector('.input')
 refresh.addEventListener('click', clearAll)
 
 function clearAll() {
-    // const first = document.querySelector('.first')
-    // const second = document.querySelector('.second')
+    const first = document.querySelector('.first')
+    const second = document.querySelector('.second')
     input.value = '0.00'
-        // first.innerHTML = '0.00' + ' ' + 'USD'
-        // second.innerHTML = '0.00' + ' ' + 'EUR'
+        first.innerHTML = '0.00' + ' ' + 'USD'
+        second.innerHTML = '0.00' + ' ' + 'EUR'
 }
 async function calculate() {
     const screen = document.querySelectorAll('#screen')
@@ -187,7 +187,7 @@ function removeError() {
 
 function bodyFun(e) {
     // console.log('hello')
-    // console.log(e)
+    // console.log(e.target)
     let dropdown = document.querySelectorAll('.dropdown')
     console.log(dropdown)
     if (e.target == body) {
@@ -199,8 +199,8 @@ function bodyFun(e) {
 let button = document.querySelector('button')
 button.addEventListener('click', calculate)
 let body = document.querySelector('body')
-body.addEventListener('click', bodyFun)
-console.log(body)
+body.addEventListener('click', bodyFun,)
+// console.log(body)
     // window.addEventListener('load', clearAll)
     // let currencyConverted = document.querySelectorAll('.currency-converted-to')
     // currencyConverted.forEach(item => item.addEventListener('click', (e) => {
